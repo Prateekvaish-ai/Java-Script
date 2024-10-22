@@ -34,3 +34,4 @@ console.log(movies);
 // movies.splice(2, 2); // removes 2 elements from index 2
 movies.splice(2, 2, 'Deadpool 2', '1920 evil returns', 'Constantine')//replaces 2 elements from 
 console.log(movies);
+

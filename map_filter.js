@@ -15,3 +15,4 @@ console.log(NewPrices);
 const evenNums = nums.filter((n) => {return n % 2 === 0 });
 console.log(evenNums);
 
+

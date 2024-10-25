@@ -44,7 +44,7 @@ console.log(smartphone);
 
 const smartphoneArray = [
     {
-        brand : 'sumsung',
+        brand : 'Sumsung',
         model : 'Galaxy s23',
         price : 50000,
         colors : ['black', 'white', 'gray']
@@ -73,7 +73,13 @@ const smartphoneArray = [
         brand : 'Google',
         model : 'Pixel 9',
         price : 50000,
-        colors : ['black', 'white', 'gray']
+        colors : ['black', 'white', 'gray', 'blue']
+    },
+    {
+        brand : 'Samsung',
+        model : 'Galaxy s9',
+        price : 50000,
+        colors : ['black', 'white', 'gray', 'blue']
     },
 ];
 
@@ -82,4 +88,37 @@ const smartphoneArray = [
 //  add new color in third smartphone
 // replace 1st color of 2nd smartphone
 
-console.log(smartphone[1].price);
+console.log(smartphoneArray.length);
+
+// filter all smartphones with price less than 50000
+
+const budgetPhones = smartphoneArray.filter((phone) => {
+    return phone.price < 50000;
+});
+
+console.log(budgetPhones);
+
+// filter all phones with bluw color
+
+const colors = smartphoneArray.filter((phone) => {
+    return phone.colors.includes('blue');
+});
+
+console.log(colors);
+
+const brands = smartphoneArray.map( (phone) => {
+    return phone.brand;
+});
+
+console.log(brands);
+
+const keyword = 'sam';
+// const results = smartphoneArray.filter((phone) => {
+//    return phone.brand.toLowerCase() === keyword.toLowerCase(); 
+// });
+
+const results = smartphoneArray.filter((phone) => {
+    return phone.brand.toLowerCase().includes(keyword.toLowerCase()); 
+ });
+
+console.log(results);
